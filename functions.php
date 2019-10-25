@@ -5,23 +5,23 @@
 $quotes = array(
 
 
-[quote => 'Change the world by being yourself']
-[source => 'Amy Poehler']
+["quote" => "Change the world by being yourself"]
+["source" => "Amy Poehler"]
 ,
-[quote => 'Every moment is a fresh beginning']
-[source => 'TS Eliot']
+["quote" => "Every moment is a fresh beginning"]
+["source" => "TS Eliot"]
 ,
-[quote => 'Never regret anything that made you smile']
-[source => 'Mark Twain']
+["quote" => "Never regret anything that made you smile"]
+["source" => "Mark Twain"]
 ,
-[quote => 'Everything you can imagine is real']
-[source => 'Pablo Picasso']
+["quote" => "Everything you can imagine is real"]
+["source" => "Pablo Picasso"]
 ,
-[quote => 'Simplicity is the ultimate sophistication']
-source => 'Leonardo da Vinci']
+["quote" => "Simplicity is the ultimate sophistication"]
+["source" => "Leonardo da Vinci"]
 ,
-[quote => 'Tough times never last but tough people do']
-[source => 'Robert H Schiuller']
+["quote" => "Tough times never last but tough people do"]
+["source" => "Robert H Schiuller"]
 
 
 );
@@ -30,26 +30,25 @@ source => 'Leonardo da Vinci']
 
 // Create the getRandomQuuote function and name it getRandomQuote
 
-function getRandomQuote(array){
+  function getRandomQuote($quotes){
 
-  var quoteIndex = Math.floor(Math.random() * quotes.length);
+  return $quotes[rand(0, 5)];
 
-  for (var i = 0; i < array.length; i++) {
 
-    var randomQuote = array[quoteIndex];
 
-  }
-  return randomQuote;
 }
 
-var result = getRandomQuote(quotes);
 
 // Create the printQuote funtion and name it printQuote
 Function printquote() {
-    var result = getRandomQuote(); // Calls and stores the getRandomQuote in a variable
-    var message = "<p class='quote'>" + quotes.quote + "</p>" +"<p class='source'>" + quotes.source + "</p>";
-    document.getElementById('quote-box').innerHTML = message;
+
+  $randomQuote = getRandomQuote($quotes);
+
+ $quote = getRandomQuote($quotes);
+   $str = '';
+   $string .= "<p class='quote'>" . $quote["quote"] . "</p>";
+   $string .= "<p class='source'>" . $quote["source"];
 }
-console.log(results)
+
 
 ?>
