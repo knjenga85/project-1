@@ -2,26 +2,36 @@
 
 // Create the Multidimensional array of quote elements and name it quotes
 // Each inner array element should be an associative array
-$quotes = array(
 
+$quotes[] = [
+"quote" => "Change the world by being yourself",
+"source" => "Amy Poehler"
+];
 
-["quote" => "Change the world by being yourself"]
-["source" => "Amy Poehler"]
-,
-["quote" => "Every moment is a fresh beginning"]
-["source" => "TS Eliot"]
-,
-["quote" => "Never regret anything that made you smile"]
-["source" => "Mark Twain"]
-,
-["quote" => "Everything you can imagine is real"]
-["source" => "Pablo Picasso"]
-,
-["quote" => "Simplicity is the ultimate sophistication"]
-["source" => "Leonardo da Vinci"]
-,
-["quote" => "Tough times never last but tough people do"]
-["source" => "Robert H Schiuller"]
+$quotes[] = [
+"quote" => "Every moment is a fresh beginning",
+"source" => "TS Eliot"
+];
+
+$quotes[] = [
+"quote" => "Never regret anything that made you smile",
+"source" => "Mark Twain"
+];
+
+$quotes[] = [
+"quote" => "Everything you can imagine is real",
+"source" => "Pablo Picasso"
+];
+
+$quotes[] = [
+"quote" => "Simplicity is the ultimate sophistication",
+"source" => "Leonardo da Vinci"
+];
+
+$quotes[] = [
+"quote" => "Tough times never last but tough people do",
+"source" => "Robert H Schiuller"
+];
 
 
 );
@@ -30,9 +40,9 @@ $quotes = array(
 
 // Create the getRandomQuuote function and name it getRandomQuote
 
-  function getRandomQuote($quotes){
+  function getRandomQuote(){
 
-  return $quotes[rand(0, 5)];
+  return $quotes[rand(0, 5)]; // Calls random number
 
 
 
@@ -48,6 +58,7 @@ Function printquote() {
    $str = '';
    $string .= "<p class='quote'>" . $quote["quote"] . "</p>";
    $string .= "<p class='source'>" . $quote["source"];
+   echo $string
 }
 
 
